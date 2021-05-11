@@ -1,15 +1,23 @@
 import React from "react";
-import {
-    Link
-} from "react-router-dom";
-import Nav from 'react-bootstrap/Nav'
+import NewsBox from '../../Components/NewsBox/NewsBox';
 
 function NewsPage(props) {
     return (
         <div>
             <h2>
-                {props.page}
+                {props.data.name}
             </h2>
+            {props.data.templates.map(item => (
+                (item.title !== undefined && item.type != "73") ?
+                (
+                    <div>
+                        <NewsBox item={item} />
+                    </div>
+                ) :
+                (
+                    <></>
+                )
+            ))}
         </div>
     );
 }

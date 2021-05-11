@@ -1,36 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Navigation from './Containers/Navigation/Navigation';
 import NewsPage from './Containers/NewsPage/NewsPage';
 import './App.css';
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      
+      const result = await axios(
+        'https://today.line.me/id/portaljson',
+      );
+
+      setData(result.data);
+      setIsLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
+      {isLoading ? (
+        <div>Loading ...</div>
+      ) : (
         <Router>
           <div>
-            <Navigation />
+            <Navigation data={data}/>
 
             {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
             <Switch>
-              <Route path="/top">
-                <NewsPage page="top" />
-              </Route>
-              <Route path="/about">
-                <NewsPage page="about" />
-              </Route>
-              <Route path="/users">
-                <NewsPage page="users"/>
-              </Route>
+              {data.result.categories.map(item => (
+                <Route path={"/" + item.name}>
+                  <NewsPage data={item} />
+                </Route>
+              ))}
             </Switch>
           </div>
         </Router>
+      )}
     </div>
   );
 }
