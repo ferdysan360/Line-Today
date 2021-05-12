@@ -1,7 +1,8 @@
 .App {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  background-color: #ffffff;
+  /* max-width: 770px; */
+  max-width: 770px;
+  padding: 10px 0px;
 }
 
 .App-logo {
@@ -37,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.line-today-logo {
+  padding: 10px 10px;
 }

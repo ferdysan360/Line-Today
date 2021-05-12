@@ -35,6 +35,7 @@ function App() {
       ) : (
         <Router>
           <div>
+            <img className="line-today-logo" src="https://static-today.line-scdn.net/dist/9a81ef70/static/img/brand-logo-rectangle-today-solid.svg"></img>
             <Navigation data={data}/>
 
             {/* A <Switch> looks through its children <Route>s and
