@@ -1,8 +1,54 @@
-/* .navbar {
-    overflow: scroll;
+.navbar {
+    overflow: auto;
     white-space: nowrap;
+    display: inline-block;
 }
 
 .navbar-item {
     display: inline-block;
-} */
+}
+
+/* width */
+.navbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Track */
+.navbar::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
+ 
+/* Handle */
+.navbar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #9F9F9F; 
+}
+
+/* Handle on hover */
+.navbar::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background: #808080; 
+}
+
+/* unvisited link */
+.navbar-link {
+    padding: 0px 10px;
+    font-weight: 500;
+    color: #9F9F9F;
+    text-decoration: none;
+}
+
+/* visited link */
+.navbar-link:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.navbar-link:hover {
+    color: #292929;
+}
+
+/* selected link */
+.navbar-link:active {
+    text-decoration: none;
+}

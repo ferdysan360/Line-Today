@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import './NewsDetail.css';
 import axios from "axios";
 import publisherIcon from './publisherIcon.png';
+import ReactHtmlParser from 'react-html-parser';
 
 function NewsDetail() {
     const [data, setData] = useState(0);
@@ -22,7 +23,7 @@ function NewsDetail() {
         };
 
         fetchData();
-    }, []);
+    }, [articleHash]);
 
     return (
         <div className="newsdetail-container">
@@ -52,7 +53,8 @@ function NewsDetail() {
                             </div>
                         </div>
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: data.data.content }} />
+                    {/* <div dangerouslySetInnerHTML={{ __html: data.data.content }} /> */}
+                    <div>{ReactHtmlParser(data.data.content)}</div>
                 </div>
             )}
         </div>

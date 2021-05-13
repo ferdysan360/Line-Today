@@ -42,6 +42,9 @@ function App() {
             {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
             <Switch>
+              <Route path="/" exact>
+                <NewsPage data={data.result.categories[0]} />
+              </Route>
               {data.result.categories.map(item => (
                 <Route path={"/" + item.name}>
                   <NewsPage data={item} />
