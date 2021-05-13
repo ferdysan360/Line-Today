@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import './NewsDetail.css';
 import axios from "axios";
+import publisherIcon from './publisherIcon.png';
 
 function NewsDetail() {
     const [data, setData] = useState(0);
@@ -33,7 +34,15 @@ function NewsDetail() {
                         {data.data.title}
                     </div>
                     <div class="newsdetail-publisherInfo">
-                        <img className="newsdetail-publisherIcon" src={"https://obs.line-scdn.net/" + data.data.publisherIcon.hash} width="42" height="42"/>
+                        {
+                            data.data.publisherIcon ?
+                            (
+                                <img className="newsdetail-publisherIcon" src={"https://obs.line-scdn.net/" + data.data.publisherIcon.hash} width="42" height="42" />
+                            ) :
+                            (
+                                <img className="newsdetail-publisherIcon" src={publisherIcon} width="42" height="42" />
+                            )
+                        }
                         <div>
                             <div className="newsdetail-publisher">
                                 {data.data.publisher}
