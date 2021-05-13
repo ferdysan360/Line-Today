@@ -1,4 +1,7 @@
 import React from "react";
+import {
+    Link
+} from "react-router-dom";
 import './NewsBox.css';
 
 function NewsBox(props) {
@@ -8,13 +11,13 @@ function NewsBox(props) {
                 <div className="newsbox-container">
                 {
                     section.articles.slice(0, 6).map(article => (
-                        <a className="newsbox-a" href={article.url.url}>
+                        <Link className="newsbox-a" to={"/article/" + article.url.hash}>
                             <div className="newsbox-items">
                                 <img className="newsbox-thumbnail" src={"https://obs.line-scdn.net/" + article.thumbnail.hash} width="340" height="191.25"></img>
                                 <div className="newsbox-title">{article.title}</div>
                                 <div className="newsbox-publisher">{article.publisher}</div>
                             </div>
-                        </a>
+                        </Link>
                     ))
                 }
                 </div>

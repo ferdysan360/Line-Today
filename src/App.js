@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Navigation from './Containers/Navigation/Navigation';
 import NewsPage from './Containers/NewsPage/NewsPage';
+import NewsDetail from './Containers/NewsDetail/NewsDetail';
 import './App.css';
 import axios from "axios";
 
@@ -46,6 +47,9 @@ function App() {
                   <NewsPage data={item} />
                 </Route>
               ))}
+              <Route path="/article/:articleHash">
+                <NewsDetail />
+              </Route>
             </Switch>
           </div>
         </Router>

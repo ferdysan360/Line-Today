@@ -1,0 +1,14 @@
+.newsdetail-container {
+    background-color: #F5F5F5;
+    padding: 20px 30px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.item-container {
+    margin: 50px 0px;
+}
+
+.item-title {
+    font-size: 20px;
+    font-weight: bold;
+}

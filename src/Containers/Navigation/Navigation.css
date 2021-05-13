@@ -1,4 +1,8 @@
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
+/* .navbar {
+    overflow: scroll;
+    white-space: nowrap;
 }
+
+.navbar-item {
+    display: inline-block;
+} */
