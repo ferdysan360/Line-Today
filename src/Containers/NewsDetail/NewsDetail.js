@@ -29,7 +29,20 @@ function NewsDetail() {
                 <div>Loading ...</div>
             ) : (
                 <div>
-                    <h2>{data.data.title}</h2>
+                    <div className="newsdetail-title">
+                        {data.data.title}
+                    </div>
+                    <div class="newsdetail-publisherInfo">
+                        <img className="newsdetail-publisherIcon" src={"https://obs.line-scdn.net/" + data.data.publisherIcon.hash} width="42" height="42"/>
+                        <div>
+                            <div className="newsdetail-publisher">
+                                {data.data.publisher}
+                            </div>
+                            <div className="newsdetail-publishTimeAuthor">
+                                Dipublikasikan {data.data.publishTime} • {data.data.author}
+                            </div>
+                        </div>
+                    </div>
                     <div dangerouslySetInnerHTML={{ __html: data.data.content }} />
                 </div>
             )}
