@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex-flow: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .newsbox-a {

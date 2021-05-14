@@ -5,9 +5,6 @@ import './NewsPage.css';
 function NewsPage(props) {
     return (
         <div className="newspage-container">
-            <h2>
-                {props.data.name}
-            </h2>
             {props.data.templates.map(item => (
                 (item.title !== undefined && item.type != "73") ?
                 (

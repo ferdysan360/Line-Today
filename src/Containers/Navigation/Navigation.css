@@ -6,11 +6,12 @@
 
 .navbar-item {
     display: inline-block;
+    height: 30px;
 }
 
 /* width */
 .navbar::-webkit-scrollbar {
-  height: 8px;
+  height: 5px;
 }
 
 /* Track */
@@ -50,5 +51,29 @@
 
 /* selected link */
 .navbar-link:active {
+    text-decoration: none;
+}
+
+/* unvisited link */
+.navbar-link-active {
+    padding: 0px 10px;
+    font-weight: bolder;
+    color: #292929;
+    text-decoration: none;
+    border-bottom: 3px solid #292929;
+}
+
+/* visited link */
+.navbar-link-active:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.navbar-link-active:hover {
+    color: #292929;
+}
+
+/* selected link */
+.navbar-link-active:active {
     text-decoration: none;
 }

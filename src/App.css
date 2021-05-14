@@ -1,8 +1,8 @@
 .App {
   background-color: #ffffff;
-  /* max-width: 770px; */
   max-width: 770px;
   padding: 10px 0px;
+  margin: auto;
 }
 
 .App-logo {
@@ -14,17 +14,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: white;
-  max-width: 500px;
-  /* max-height: 100px; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(15px);
 }
 
 .App-link {
@@ -41,5 +30,5 @@
 }
 
 .line-today-logo {
-  padding: 10px 10px;
+  padding: 10px 20px;
 }
