@@ -1,0 +1,15 @@
+.newscarousel-containers {
+    width: 100%;
+    height: 40vh;
+}
+
+.newscarousel-thumbnail {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    /* margin: auto; */
+}
+
+.newscarousel-a {
+    text-decoration: none;
+}
