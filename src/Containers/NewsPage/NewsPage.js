@@ -16,7 +16,7 @@ function NewsPage(props) {
                             <div className="item-container">
                                 <div className="item-title">{item.title}</div>
                                 {
-                                (item.type == "6303") ?
+                                (item.type == "6303" || item.type == "59") ?
                                     <NewsList item={item} limit={6} />
                                 :
                                     <NewsBox item={item} limit={6} />
