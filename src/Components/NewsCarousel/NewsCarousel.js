@@ -16,7 +16,7 @@ function NewsCarousel(props) {
                             <img
                                 className="newscarousel-thumbnail"
                                 src={"https://obs.line-scdn.net/" + article.thumbnail.hash}
-                                fluid
+                                fluid={true}
                             />
                             <p className="legend">{article.title}</p>
                         </Link>

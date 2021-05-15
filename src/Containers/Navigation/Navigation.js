@@ -13,7 +13,7 @@ function Navigation(props) {
             <ScrollContainer className="navbar" hideScrollbars="false">
                 <div className="navbar-item">
                     {props.data.result.categoryList.map((item, index) => (
-                        <Link className="navbar-link" to={"/" + item.name}>{item.name}</Link>
+                        <Link key={"navbar" + item.name} className="navbar-link" to={"/" + item.name}>{item.name}</Link>
                         // (value === index) ?
                         // <Link className="navbar-link-active" to={"/" + item.name} onClick={() => setValue(index)}>{item.name}</Link>
                         // :

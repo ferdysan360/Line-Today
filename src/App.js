@@ -52,7 +52,7 @@ function App() {
                 <NewsPage data={data.result.categories[0]} />
               </Route>
               {data.result.categories.map(item => (
-                <Route path={"/" + item.name}>
+                <Route key={"route" + item.name} path={"/" + item.name}>
                   <NewsPage data={item} />
                 </Route>
               ))}
