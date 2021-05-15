@@ -1,6 +1,7 @@
 .newspage-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     background-color: #F5F5F5;
     padding: 0px 2vh;
     border-top: 1px solid #EEEEEE;
