@@ -28,7 +28,7 @@ function Bookmarks() {
     return (
         <div className="bookmarks-container">
             <h2 className="bookmarks-header">My Bookmarks</h2>
-            <NewsBox item={bookmarks}/>
+            <NewsBox item={bookmarks} limit={bookmarks.sections[0].articles.length}/>
         </div>
     );
 }

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import {
     Link
 } from "react-router-dom";
-import './NewsBox.css';
+import './NewsList.css';
 import bookmarkPlus from '../../Assets/bookmark-plus.png'
 import bookmarkChecked from '../../Assets/bookmark-check-fill.png';
 
-function NewsBox(props) {
+function NewsList(props) {
     function initialState() {
         var json_sections = {};
         json_sections['sections'] = [];
@@ -86,17 +86,19 @@ function NewsBox(props) {
     return (
         <div>
             {props.item.sections.map(section => (
-                <div className="newsbox-container">
+                <div className="newslist-container">
                 {
                     section.articles.slice(0, props.limit).map(article => (
-                        <div>    
-                            <Link className="newsbox-a" to={"/article/" + article.url.hash}>
-                                <div className="newsbox-items">
-                                    <img className="newsbox-thumbnail" src={"https://obs.line-scdn.net/" + article.thumbnail.hash} width="340" height="191.25"></img>
-                                    <div className="newsbox-title">{article.title}</div>
-                                </div>
-                            </Link>
-                            <div className="newsbox-publisher">
+                        <div className="newslist-items">
+                            <div>
+                                <Link className="newslist-a" to={"/article/" + article.url.hash}>
+                                    <img className="newslist-thumbnail" src={"https://obs.line-scdn.net/" + article.thumbnail.hash} width="112" height="64"></img>
+                                </Link>
+                            </div>
+                            <div className="newslist-publisher">
+                                <Link className="newslist-a" to={"/article/" + article.url.hash}>
+                                    <div className="newslist-title">{article.title}</div>
+                                </Link>
                                 <div>
                                     {article.publisher}
                                 </div>
@@ -117,4 +119,4 @@ function NewsBox(props) {
     );
 }
 
-export default NewsBox;
+export default NewsList;

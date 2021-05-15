@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import './NewsDetail.css';
 import axios from "axios";
-import publisherIcon from './publisherIcon.png';
+import publisherIcon from '../../Assets/publisherIcon.png';
 import ReactHtmlParser from 'react-html-parser';
 
 function NewsDetail() {

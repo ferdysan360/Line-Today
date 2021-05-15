@@ -1,12 +1,13 @@
 import React from "react";
 import NewsBox from '../../Components/NewsBox/NewsBox';
+import NewsList from '../../Components/NewsList/NewsList';
 import NewsCarousel from '../../Components/NewsCarousel/NewsCarousel';
 import './NewsPage.css';
 
 function NewsPage(props) {
     return (
         <div className="newspage-container">
-            {/* <NewsCarousel /> */}
+            <h2 className="newspage-header">{props.data.name}</h2>
             {props.data.templates.map((item, index) => (
                 (item.type != "73") ?
                 (
@@ -14,7 +15,12 @@ function NewsPage(props) {
                         {(item.title !== undefined) ? 
                             <div className="item-container">
                                 <div className="item-title">{item.title}</div>
-                                <NewsBox item={item} />
+                                {
+                                (item.type == "6303") ?
+                                    <NewsList item={item} limit={6} />
+                                :
+                                    <NewsBox item={item} limit={6} />
+                                }
                             </div>
                         : (
                             <div>
