@@ -3,12 +3,14 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link,
 } from "react-router-dom";
 import Navigation from './Containers/Navigation/Navigation';
 import NewsPage from './Containers/NewsPage/NewsPage';
 import NewsDetail from './Containers/NewsDetail/NewsDetail';
 import './App.css';
 import axios from "axios";
+import Bookmarks from "./Containers/Bookmarks/Bookmarks";
 
 function App() {
   const [data, setData] = useState(0);
@@ -37,7 +39,10 @@ function App() {
       ) : (
         <Router>
           <div>
-            <img className="line-today-logo" src="https://static-today.line-scdn.net/dist/9a81ef70/static/img/brand-logo-rectangle-today-solid.svg"></img>
+            <div className="top-header">
+              <img className="line-today-logo" src="https://static-today.line-scdn.net/dist/9a81ef70/static/img/brand-logo-rectangle-today-solid.svg"></img>
+              <Link className="bookmarks-link" to="/bookmarks">Bookmarks</Link>
+            </div>
             <Navigation data={data}/>
 
             {/* A <Switch> looks through its children <Route>s and
@@ -53,6 +58,9 @@ function App() {
               ))}
               <Route path="/article/:articleHash">
                 <NewsDetail />
+              </Route>
+              <Route path="/bookmarks">
+                <Bookmarks />
               </Route>
             </Switch>
           </div>

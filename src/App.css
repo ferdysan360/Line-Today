@@ -32,3 +32,30 @@
 .line-today-logo {
   padding: 10px 20px;
 }
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmarks-link {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #9F9F9F;
+    text-decoration: none;
+}
+
+/* visited link */
+.bookmarks-link:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+.bookmarks-link:hover {
+    color: #292929;
+}
+
+/* selected link */
+.bookmarks-link:active {
+    text-decoration: none;
+}

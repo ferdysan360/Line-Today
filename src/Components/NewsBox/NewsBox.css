@@ -11,7 +11,7 @@
 }
 
 .newsbox-items {
-    padding: 12px 0px;
+    padding: 12px 0px 0px 0px;
     width: 340px;
     text-align: left;
 }
@@ -19,6 +19,7 @@
 .newsbox-thumbnail {
     margin: 0px 0px 5px 0px;
     border-radius: 4px;
+    object-fit: cover;
 }
 
 .newsbox-title {
@@ -28,6 +29,13 @@
 }
 
 .newsbox-publisher {
+    padding: 0px 0px 12px 0px;
     font-size: 12px;
     color: #9f9f9f;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmark:hover {
+    cursor: pointer;
 }

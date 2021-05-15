@@ -1,0 +1,11 @@
+.bookmarks-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F5F5F5;
+    padding: 0px 2vh;
+    border-top: 1px solid #EEEEEE;
+}
+
+.bookmarks-header {
+    padding: 20px 0px 0px 0px;
+}
