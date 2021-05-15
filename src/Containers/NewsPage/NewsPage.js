@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NewsBox from '../../Components/NewsBox/NewsBox';
 import NewsList from '../../Components/NewsList/NewsList';
 import NewsCarousel from '../../Components/NewsCarousel/NewsCarousel';
 import './NewsPage.css';
 
 function NewsPage(props) {
+    useEffect(() => {
+        document.title = "LINE TODAY";
+    }, []);
+
     return (
         <div className="newspage-container">
             <h2 className="newspage-header">{props.data.name}</h2>

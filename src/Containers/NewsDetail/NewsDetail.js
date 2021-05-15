@@ -44,6 +44,7 @@ function NewsDetail() {
             );
 
             setData(result.data);
+            document.title = result.data.data.title;
             setIsLoading(false);
         };
 
