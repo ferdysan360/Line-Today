@@ -39,11 +39,13 @@ function App() {
       ) : (
         <Router>
           <div>
-            <div className="top-header">
-              <img className="line-today-logo" src="https://static-today.line-scdn.net/dist/9a81ef70/static/img/brand-logo-rectangle-today-solid.svg"></img>
-              <Link className="bookmarks-link" to="/bookmarks">Bookmarks</Link>
+            <div className="title-navbar-header">
+              <div className="top-header">
+                <img className="line-today-logo" src="https://static-today.line-scdn.net/dist/9a81ef70/static/img/brand-logo-rectangle-today-solid.svg"></img>
+                <Link className="bookmarks-link" to="/bookmarks">Bookmarks</Link>
+              </div>
+              <Navigation data={data}/>
             </div>
-            <Navigation data={data}/>
 
             {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}

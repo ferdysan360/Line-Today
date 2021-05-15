@@ -33,9 +33,18 @@
   padding: 10px 20px;
 }
 
+.title-navbar-header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .top-header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 .bookmarks-link {
