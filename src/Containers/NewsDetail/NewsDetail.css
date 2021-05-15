@@ -20,6 +20,16 @@
     border-radius: 50%;
 }
 
+.newsdetail-publisher-bookmark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #292929;
+    margin: 0px 10px;
+}
+
 .newsdetail-publisher {
     font-size: 15px;
     font-weight: 500;
