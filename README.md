@@ -26,10 +26,18 @@ A Line Today Site look-a-like made with React
 
 ![screenshot-2](src/Assets/screenshot-2.png)
 
+![screenshot-3](src/Assets/screenshot-3.png)
+
+![screenshot-4](src/Assets/screenshot-4.png)
+
 ### 2. Bookmarks Page
 
-![screenshot-3](src/Assets/screenshot-3.png)
+![screenshot-5](src/Assets/screenshot-5.png)
+
+![screenshot-6](src/Assets/screenshot-6.png)
 
 ### 3. Article Page
 
-![screenshot-4](src/Assets/screenshot-4.png)
+![screenshot-7](src/Assets/screenshot-7.png)
+
+![screenshot-8](src/Assets/screenshot-8.png)
